@@ -125,6 +125,8 @@ public class CommonController {
         return mv;
     }
 
+
+
     @RequestMapping("/stories")
     public ModelAndView challengesTakenList(Principal principal) {
         List<ChallengeEntry> entries = commonService.getChallengesTakenList(principal.getName());
@@ -137,6 +139,16 @@ public class CommonController {
     @RequestMapping("/gallery")
     public String gallery() {
         return "gallery";
+    }
+
+    @RequestMapping("/profile")
+    public String profile() {
+        return "profile";
+    }
+
+    @RequestMapping("/submitstory")
+    public String submitstory() {
+        return "submitstory";
     }
 
     @RequestMapping("/leaderboard")
